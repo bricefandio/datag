@@ -1,0 +1,78 @@
+activer la  sauvegarde automatique
+composer require --dev phpunit/phpunit:^10.2.1
+composer dump-autoload (actualiser la sauvegarde contenu dna s composer)
+creation du fichier .gitignore(y mettre le fichier vendor)
+git init
+git remote add origin htp///10.0.2.216/root/game.git
+git add .
+git commit --m "int.."
+git push -u origin master
+
+git remote  remove origin (possiblement la premiere fois)
+
+git remote add origin htp///10.0.2.216/root/game.git
+git add .
+git commit --m "int.."
+git push -u origin master (la branche qui cree le projet doit etre maintener vu qu'il travail sur maiin avec les protection)
+
+
+git clone http://10.0.2.216/root/games.git
+git branch feature/add-tower-test
+git checkout feature/add-tower-test
+ pour chaque utilisateur: 
+git init
+git remote add origin htp///10.0.2.216/root/game.git
+git add .
+git config --global user.email "mail"
+git config --global user.name "name"
+git commit --m "int.."
+git push 
+git push-set-upstream origin feature/add-tower-test
+
+
+git checkout -b developp(cree une novel branche et checkout automatiquement)
+git pull (pour avoir le projet le plus recent)
+
+
+
+
+git branch feature/create-pipeline
+ git checkout feature/create-pipeline
+
+composer instal pour chaque utiilisateur
+
+commande pour les test
+./vendor/bin/phpunit test
+
+
+git add .
+git commit --m "ci/cd"
+git push
+git push-set-upstream origin feature/create-pipepline
+
+
+
+configuration ssh
+
+add variable : mettre SSH_USER pour key et pour la valeur : manager ou root selon l'enonce
+ajouter ensuite add  variable: key =SSH_Host ; value= 10.0.2.215 (adresse du serveur mail)
+
+aller sur le serveur mail  et taper: ssh-keygen -b 2048 -t rsa
+valider jusqu'a root@ns1 et entrer:cat /root/.ssh/id_rsa
+
+copier la cle qui s'affiche avec le begin et le end
+
+
+commande pour envoyer laclé surd le serveur gitlab directrement(optionnel)
+scp root@10.0.2.216:/root/.ssh/id_rsa /root/.ssh/id_rsa (l'adresse ici est l'adresse de guitlab )
+
+entre le mot de passe (de connexion sur gitlab)
+
+
+la cle est a deposer dans la variable gitlab ou on a la variable de ssh_host
+une variable a cree qui represente le chemin  de deploiement
+
+a la fin merge requst vers devellop
+
+
+la po merge vers master mettre un only pour que le deploiment se fait uniquement sur master
